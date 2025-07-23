@@ -291,13 +291,13 @@ ali.indroduce();
 
 //6
 
-const name6 = prompt("Yeni adinizi daxil edin:");
-const pwd6 = Number(prompt("Yeni parolunuzu daxil edin:"));
+// const name6 = prompt("Yeni adinizi daxil edin:");
+// const pwd6 = Number(prompt("Yeni parolunuzu daxil edin:"));
 
 const userObj6 = {};
 
-userObj6.name = name6;
-userObj6.pwd = pwd6;
+// userObj6.name = name6;
+// userObj6.pwd = pwd6;
 
 function checkUser() {
   for (let i = 0; i < 3; i++) {
@@ -310,4 +310,85 @@ function checkUser() {
     alert("Sehv daxil olmuzu. yeniden cehd edin!");
   }
 }
-checkUser();
+// checkUser();
+
+function checkTen(num) {
+  let sum = 0;
+
+  let numTrunc = Math.trunc(Math.trunc(num) / 10);
+  if (numTrunc > 0) {
+    sum++;
+  } else {
+  }
+  console.log(sum);
+}
+
+// checkTen(123.12);
+
+//23 Juli 2025
+
+//1-1-2-2
+
+const sentence = "ADJ sjkda sad sd";
+const num12 = 15.6;
+// const promtUser = prompt("Ment daxil edin");
+// const promtUserNumber = prompt("Reqeom daxil edin");
+
+const exerice1122 = (sentence, num, text, prom) => {
+  console.log(sentence.split(" ").length, "Length of sentence");
+  console.log(Math.trunc(num), "Decimal of number");
+  console.log(text?.toUpperCase(), "Text in upper case");
+  console.log(Math.sqrt(), "Square of number");
+};
+
+// exerice1122(sentence, num12, promtUser, promtUserNumber)
+
+//3-3-4-4
+
+const text3 = "  adawda  ";
+const num33 = 15.6;
+const replaceA = "Here is a text with aaaa";
+const concatFracFirst = 13.6;
+const concatFracSecond = 1.5;
+
+const exerice3344 = (text, num, textReplace, concatFirst, concatSecond) => {
+  console.log(text.trimEnd(), "Trimmed end");
+  console.log(
+    Math.ceil(num),
+    "Ceil of number",
+    Math.floor(num),
+    "Floor of number"
+  );
+  console.log(textReplace.replaceAll("a", "b"), "Replaced with b");
+  console.log(Math.trunc(concatFirst + concatSecond), "Concat numbers trunc");
+};
+
+exerice3344(text3, num33, replaceA, concatFracFirst, concatFracSecond);
+
+//5-5-6-6
+
+let str55 = "azerbaijan";
+let num66 = 334;
+
+const exerice5566 = (text, num) => {
+  console.log(
+    text.slice(0, 1).toUpperCase().concat(str55.slice(0)),
+    "uppered first letter"
+  );
+  console.log(text.repeat(3), "Reapeted text");
+  console.log(num.toString().split("").length, "Length of number");
+};
+
+exerice5566(str55, num66);
+
+//7-7-8-8
+
+const firstWord = "alma";
+const secondWord = "ulu";
+
+const exerice7788 = (a, b) => {
+  console.log(a.at(0) + b.slice(1, -1) + a.at(a.length - 1));
+  console.log(b.at(0) + a.slice(1, -1) + b.at(b.length - 1));
+};
+
+exerice7788(firstWord, secondWord);
