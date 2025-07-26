@@ -385,10 +385,143 @@ exerice5566(str55, num66);
 
 const firstWord = "alma";
 const secondWord = "ulu";
+const textWithGaps = "adj kjand kjand kjad";
 
-const exerice7788 = (a, b) => {
+const exerice7788 = (a, b, text) => {
   console.log(a.at(0) + b.slice(1, -1) + a.at(a.length - 1));
   console.log(b.at(0) + a.slice(1, -1) + b.at(b.length - 1));
+  // console.log(text.replaceAll(" ", ""));
 };
 
 exerice7788(firstWord, secondWord);
+
+//? 24 Juli 2025
+
+//10
+
+const textWithoutCapitalCase = "adh kjadh kadk khad";
+
+const exerice10 = (text) => {
+  console.log(
+    text
+      .split(" ")
+      .map((item) => item[0].toUpperCase() + item.slice(1))
+      .join(" ")
+  );
+};
+
+exerice10(textWithoutCapitalCase);
+
+//12
+
+const arrObj101 = { name: "Siri", age: 18 };
+const arrObj102 = { name: "Siri", age: 18 };
+
+const compareObjects = (obj1, obj2) => {
+  let obj1Arr = Object.keys(obj1);
+  let obj2Arr = Object.keys(obj2);
+  let obj1Value = Object.values(obj1);
+  let obj2Value = Object.values(obj2);
+
+  for (let i = 0; i < obj1Arr.length; i++) {
+    if (obj1Arr[i] === obj2Arr[i]) {
+      console.log("Keys are the same");
+    } else {
+      console.log("Keys are not the same");
+    }
+  }
+
+  for (let i = 0; i < obj1Value.length; i++) {
+    if (obj1Value[i] === obj2Value[i]) {
+      console.log("Values are the same");
+    } else {
+      console.log("Values are not the same");
+    }
+  }
+};
+
+compareObjects(arrObj101, arrObj102);
+
+//13
+
+const textWithLongest = "adh kjadh kadk khad";
+
+const exerice13 = (text) => {
+  console.log(text.split(" ").sort((a, b) => b.length - a.length)[0]);
+};
+
+exerice13(textWithLongest);
+
+//6
+
+const promt6 = "Siri";
+
+const exerice6 = (text) => {
+  let sait = ["a", "i", "o", "u", "e", "A", "I", "O", "U", "E"];
+  sait.includes(text[0])
+    ? console.log(`Xos gelmisen`)
+    : console.log(`Adini yeniden yoxla`);
+};
+
+exerice6(promt6);
+
+//5
+
+const checkSubstring = (baseStr, searchStr) => {
+  baseStr.toLowerCase().includes(searchStr.toLowerCase())
+    ? console.log("Daxildi")
+    : console.log("Daxil deyil");
+};
+
+checkSubstring("Hazrat", "haz");
+
+//4
+
+const checkPolindrome = (word) => {
+  let newWord = "";
+  for (let i = 0; i < word.length; i++) {
+    newWord = word[i] + newWord;
+  }
+  newWord == word ? console.log("Polindrome") : console.log("Not polindrome");
+};
+
+checkPolindrome("radar");
+
+//8 Atm
+
+const atm2000 = () => {
+  let userObj = {
+    balance: 2000,
+    showBalance: function () {
+      return this.balance;
+    },
+    addMoney: function (a) {
+      return (this.balance += a);
+    },
+    withdraw: function (a) {
+      return (this.balance -= a);
+    },
+  };
+
+  window.addEventListener("keypress", (e) => {
+    e.key === "b"
+      ? alert(`Balansiniz: ${userObj.showBalance()} $`)
+      : console.log("Duz daxil edin");
+    if (e.key === "a") {
+      let a = +prompt(`Mebleg daxil edin:`);
+      userObj.addMoney(a);
+      alert(`Balansiniz: ${userObj.showBalance()} $ oldu`);
+    } else {
+      console.log("Duz daxil edin");
+    }
+    if (e.key === "w") {
+      let a = +prompt(`Mebleg daxil edin:`);
+      userObj.withdraw(a);
+      alert(`Balansiniz: ${userObj.showBalance()} $ qaldi`);
+    } else {
+      console.log("Duz daxil edin");
+    }
+  });
+};
+
+atm2000();
